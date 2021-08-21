@@ -26,7 +26,7 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.ponto.acesso.controller"))
-                .paths(PathSelectors.any())
+                .paths(PathSelectors.ant("/**"))
                 .build()
                 .apiInfo(apiInfo());
     }
